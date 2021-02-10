@@ -3,9 +3,10 @@ package com.rhymartmanchus.kointraining.domain
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
+import javax.inject.Inject
 
-class FetchUsersUseCase (
-    private val gateway: UsersGateway
+class FetchUsersUseCase @Inject constructor (
+    val gateway: UsersGateway
 ) : UseCase<Unit, FetchUsersUseCase.Response>() {
 
     private val cache = mutableListOf<User>()

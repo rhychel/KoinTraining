@@ -4,8 +4,11 @@ import com.rhymartmanchus.kointraining.domain.User
 import com.rhymartmanchus.kointraining.domain.UsersGateway
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class UsersRepository : UsersGateway {
+@Singleton
+class UsersRepository @Inject constructor() : UsersGateway {
 
     override suspend fun addUser(user: User) {
         TODO("Not yet implemented")

@@ -13,8 +13,11 @@ import com.rhymartmanchus.kointraining.databinding.ActivityMainBinding
 import com.rhymartmanchus.kointraining.domain.FetchUserByIdUseCase
 import com.rhymartmanchus.kointraining.domain.FetchUsersUseCase
 import com.rhymartmanchus.kointraining.ui.UserViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * Study:
@@ -23,6 +26,7 @@ import kotlinx.coroutines.launch
  * 3. Hilt
  * 4. DI using Koin
  */
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val views: ActivityMainBinding by lazy {
